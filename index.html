@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- ترميز النصوص لدعم اللغة العربية بشكل صحيح -->
     <meta charset="UTF-8">
-    <!-- يجعل الموقع متوافقاً مع جميع الشاشات (الهواتف والكمبيوتر) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- عنوان الموقع -->
-    <title>موقعي الشخصي - G3</title>
-    <!-- ربط ملف التنسيق (CSS) -->
-    <link rel="stylesheet" href="style.css">
+    <title>فريق درويدات التقني - G3</title>
     <style>
-        /* تنسيق خاص لعرض الصورة بشكل احترافي داخل الكود */
-        .section-image-container {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #12161f;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9fb;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: right;
         }
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { font-size: 20px; font-weight: bold; }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
+        nav ul li a { color: white; text-decoration: none; }
+        nav ul li a:hover { color: #00adb5; }
+        main { max-width: 800px; margin: auto; padding: 20px; }
+        .hero { text-align: center; padding: 40px 20px; }
+        .hero h1 { color: #1a1a2e; font-size: 32px; }
+        .section-image-container { text-align: center; margin: 20px 0; }
         .section-image-container img {
             max-width: 100%;
-            width: 700px;
+            width: 100%;
+            height: auto;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
-            border: 2px solid #00ffff33;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .content-section h2 { color: #1a1a2e; margin-bottom: 10px; border-bottom: 2px solid #00adb5; display: inline-block; padding-bottom: 5px; }
+        footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر: الجزء العلوي من الموقع -->
     <header>
-        <div class="logo">موقعي الشخصي</div>
+        <div class="logo">فريق درويدات التقني</div>
         <nav>
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
@@ -40,30 +63,23 @@
         </nav>
     </header>
 
-    <!-- المحتوى الرئيسي -->
     <main>
-        <!-- قسم الترحيب -->
         <section id="home" class="hero">
-            <h1>
-                فريق درويدات التقني<br>
-                يرحب بكم
-            </h1>
+            <h1>فريق درويدات التقني يرحب بكم</h1>
             <p>أنا احمد مطور ومصمم ويب، أسعى لتقديم أفضل التجارب الرقمية.</p>
         </section>
 
-        <!-- قسم الصورة التقنية قبل نبذة عني -->
+        <!-- قسم الصورة -->
         <div class="section-image-container">
-            <!-- ملاحظة: تأكد من رفع الصورة إلى مستودعك بنفس اسم الملف أو استبدل الرابط أدناه -->
-            <img src="1000156837.jpg" alt="صورة فريق درويدات التقني">
+            <!-- قم بتسمية صورتك على GitHub باسم droidz.jpg لتعمل مباشرة -->
+            <img src="droidz.jpg" alt="صورة فريق درويدات التقني">
         </div>
 
-        <!-- قسم نبذة عني -->
         <section id="about" class="content-section">
             <h2>نبذة عني</h2>
             <p>أنا شغوف بتطوير المواقع وتصميم واجهات المستخدم الحديثة. أهتم بتقديم محتوى نظيف ومرتب، وأسعى دائماً لتطوير مهاراتي البرمجية في عالم الويب.</p>
         </section>
 
-        <!-- قسم مهاراتي -->
         <section id="skills" class="content-section">
             <h2>مهاراتي</h2>
             <ul>
@@ -74,20 +90,16 @@
             </ul>
         </section>
 
-        <!-- قسم اتصل بي -->
         <section id="contact" class="content-section">
             <h2>اتصل بي</h2>
             <p>يسعدني تواصلك معي عبر وسائل التواصل لأي استفسار أو تعاون مشترك.</p>
-            <p><strong>راسلني على تليجرام:</strong> t.me/@c9_sy</p>
+            <p><strong>راسلني على تليجرام:</strong> t.me/c9_sy</p>
         </section>
     </main>
 
-    <!-- الفوتر: أسفل الموقع -->
     <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة - موقع G3</p>
+        <p>&copy; 2026 جميع الحقوق محفوظة - فريق درويدات التقني</p>
     </footer>
 
-    <!-- ربط ملف التفاعل والحركة (JavaScript) -->
-    <script src="script.js"></script>
 </body>
 </html>
