@@ -9,6 +9,21 @@
     <title>موقعي الشخصي - G3</title>
     <!-- ربط ملف التنسيق (CSS) -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيق خاص لعرض الصورة بشكل احترافي داخل الكود */
+        .section-image-container {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #12161f;
+        }
+        .section-image-container img {
+            max-width: 100%;
+            width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+            border: 2px solid #00ffff33;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,13 +45,17 @@
         <!-- قسم الترحيب -->
         <section id="home" class="hero">
             <h1>
-    فريق درويدات التقني<br>
-    يرحب بكم
-</h1>
-
+                فريق درويدات التقني<br>
+                يرحب بكم
+            </h1>
             <p>أنا احمد مطور ومصمم ويب، أسعى لتقديم أفضل التجارب الرقمية.</p>
-        
         </section>
+
+        <!-- قسم الصورة التقنية قبل نبذة عني -->
+        <div class="section-image-container">
+            <!-- ملاحظة: تأكد من رفع الصورة إلى مستودعك بنفس اسم الملف أو استبدل الرابط أدناه -->
+            <img src="1000156837.jpg" alt="صورة فريق درويدات التقني">
+        </div>
 
         <!-- قسم نبذة عني -->
         <section id="about" class="content-section">
@@ -51,7 +70,7 @@
                 <li>تطوير واجهات المستخدم باستخدام HTML5 و CSS3</li>
                 <li>برمجة وتفاعل الصفحات باستخدام JavaScript</li>
                 <li>إدارة المشاريع ورفعها عبر GitHub Pages</li>
-                <li> نحن جاهزون لانشاء افضل المواقع المخصصة لشركتك</li>
+                <li>نحن جاهزون لانشاء افضل المواقع المخصصة لشركتك</li>
             </ul>
         </section>
 
