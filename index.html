@@ -170,6 +170,33 @@
     .floating-theme-btn:hover {
         transform: scale(1.1);
     }
+        /* === CSS الخاص بتغيير الألوان عند تفعيل الوضع الداكن === */
+    /* تغيير خلفية الجسم والنص الأساسي */
+    [data-theme="dark"] body {
+        background-color: #121212 !important;
+        color: #f1f1f1 !important;
+    }
+
+    /* تغيير خلفية البطاقات (الأقسام الرئيسية، الصورة، اتصل بي، مهاراتي) */
+    [data-theme="dark"] .hero,
+    [data-theme="dark"] .content-section,
+    [data-theme="dark"] .section-image-container {
+        background-color: #1e1e1e !important;
+    }
+
+    /* تغيير خلفية الهيدر والفوتر */
+    [data-theme="dark"] header,
+    [data-theme="dark"] footer {
+        background-color: #0d0d1a !important;
+    }
+
+    /* تغيير لون العناوين داخل الأقسام */
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2 {
+        color: #ffffff !important;
+    }
+    /* ========================================================= */
+    
 </style>
 
 <script>
