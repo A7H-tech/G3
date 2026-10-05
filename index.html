@@ -141,6 +141,68 @@
     <footer>
         <p>&copy; 2026 جميع الحقوق محفوظة - فريق درويدات التقني</p>
     </footer>
+<!-- زر الوضع الداكن/الفاتح العائم -->
+<button id="themeToggleBtn" class="floating-theme-btn" onclick="toggleTheme()" title="تبديل الوضع">
+    ☀️
+</button>
 
+<style>
+    .floating-theme-btn {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        z-index: 9999;
+        background-color: #0088cc;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .floating-theme-btn:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    function updateIcon(isDark) {
+        const btn = document.getElementById('themeToggleBtn');
+        if (isDark) {
+            btn.innerHTML = '🌙'; // قمر في الوضع الداكن
+        } else {
+            btn.innerHTML = '☀️'; // شمس في الوضع الفاتح
+        }
+    }
+
+    function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute('data-theme') === 'dark') {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            updateIcon(false);
+        } else {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            updateIcon(true);
+        }
+    }
+
+    // التحقق من الوضع المحفوظ عند فتح الموقع وتحديث الأيقونة فوراً
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateIcon(true);
+    } else {
+        updateIcon(false);
+    }
+            </script>
+    
 </body>
 </html>
