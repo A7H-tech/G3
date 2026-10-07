@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -52,15 +52,13 @@
         }
         .content-section h2 { color: #1a1a2e; margin-bottom: 10px; border-bottom: 2px solid #00adb5; display: inline-block; padding-bottom: 5px; }
         footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+        /* تنسيق الوضع الداكن لرابط المقالة داخل الـ style الرئيسية */
+        [data-theme="dark"] .article-link {
+            background-color: #2a2a2a !important;
+            color: #ffffff !important;
+        }
     </style>
-               [data-theme="dark"] .article-link {
-        background-color: #2a2a2a !important;
-        color: #ffffff !important;
-    }
-        
-</style>
-        
-        
 </head>
 <body>
 
@@ -84,13 +82,12 @@
 
         <!-- قسم الصورة -->
         <div class="section-image-container">
-            <!-- قم بتسمية صورتك على GitHub باسم droidz.jpg لتعمل مباشرة -->
             <img src="droidz.jpg" alt="صورة فريق درويدات التقني">
         </div>
 
         <section id="about" class="content-section">
             <h2>نبذة عني</h2>
-            <p>  أنا شغوف بتطوير المواقع وتصميم واجهات المستخدم الحديثة. أهتم بتقديم محتوى نظيف ومرتب، وأسعى دائماً لتطوير مهاراتي البرمجية في عالم الويب ،متخصص في بناء وبرمجة المواقع الإلكترونية من الصفر باستخدام أحدث لغات وتقنيات البرمجة. أمتلك القدرة على تحويل الأفكار البرمجية إلى مواقع ويب متكاملة، آمنة، وعالية الأداء مع التركيز على كفاءة الكود وسلاسة التجربة . </p>
+            <p> أنا شغوف بتطوير المواقع وتصميم واجهات المستخدم الحديثة. أهتم بتقديم محتوى نظيف ومرتب، وأسعى دائماً لتطوير مهاراتي البرمجية في عالم الويب ،متخصص في بناء وبرمجة المواقع الإلكترونية من الصفر باستخدام أحدث لغات وتقنيات البرمجة. أمتلك القدرة على تحويل الأفكار البرمجية إلى مواقع ويب متكاملة، آمنة، وعالية الأداء مع التركيز على كفاءة الكود وسلاسة التجربة . </p>
         </section>
 
         <section id="skills" class="content-section">
@@ -103,7 +100,7 @@
             </ul>
         </section>
 
-             <!-- قسم المقالات -->
+        <!-- قسم المقالات -->
         <section id="articles" class="content-section">
             <h2>مقالات تقنية</h2>
             <p>إليك أحدث المقالات التي قمنا بنشرها:</p>
@@ -124,7 +121,7 @@
             </div>
         </section>
             
-            <!-- قسم اتصل بي -->
+        <!-- قسم اتصل بي -->
         <section id="contact" class="content-section">
             <h2>اتصل بي</h2>
             <p>يسعدني تواصلك معي عبر وسائل التواصل لأي استفسار أو تعاون مشترك.</p>
@@ -168,113 +165,107 @@
 
             </div>
         </section>
-        
-        
     </main>
 
     <footer>
         <p>&copy; 2026 جميع الحقوق محفوظة - فريق درويدات التقني</p>
     </footer>
-<!-- زر الوضع الداكن/الفاتح العائم -->
-<button id="themeToggleBtn" class="floating-theme-btn" onclick="toggleTheme()" title="تبديل الوضع">
-    ☀️
-</button>
 
-<style>
-    .floating-theme-btn {
-        position: fixed;
-        bottom: 25px;
-        left: 25px;
-        z-index: 9999;
-        background-color: #0088cc;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s, background-color 0.3s;
-    }
+    <!-- زر الوضع الداكن/الفاتح العائم -->
+    <button id="themeToggleBtn" class="floating-theme-btn" onclick="toggleTheme()" title="تبديل الوضع">
+        ☀️
+    </button>
 
-    .floating-theme-btn:hover {
-        transform: scale(1.1);
-    }
+    <style>
+        .floating-theme-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 9999;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .floating-theme-btn:hover {
+            transform: scale(1.1);
+        }
+
         /* === CSS الخاص بتغيير الألوان عند تفعيل الوضع الداكن === */
-    /* تغيير خلفية الجسم والنص الأساسي */
-    [data-theme="dark"] body {
-        background-color: #121212 !important;
-        color: #f1f1f1 !important;
-    }
-
-    /* تغيير خلفية البطاقات (الأقسام الرئيسية، الصورة، اتصل بي، مهاراتي) */
-    [data-theme="dark"] .hero,
-    [data-theme="dark"] .content-section,
-    [data-theme="dark"] .section-image-container {
-        background-color: #1e1e1e !important;
-    }
-
-    /* تغيير خلفية الهيدر والفوتر */
-    [data-theme="dark"] header,
-    [data-theme="dark"] footer {
-        background-color: #0d0d1a !important;
-    }
-
-    /* تغيير لون العناوين داخل الأقسام */
-    [data-theme="dark"] h1,
-    [data-theme="dark"] h2 {
-        color: #ffffff !important;
-    }
-    /* ========================================================= */
-    
-</style>
-
-<script>
-    function updateIcon(isDark) {
-        const btn = document.getElementById('themeToggleBtn');
-        if (isDark) {
-            btn.innerHTML = '🌙'; // قمر في الوضع الداكن
-        } else {
-            btn.innerHTML = '☀️'; // شمس في الوضع الفاتح
+        [data-theme="dark"] body {
+            background-color: #121212 !important;
+            color: #f1f1f1 !important;
         }
-    }
 
-    function toggleTheme() {
-        const html = document.documentElement;
-        if (html.getAttribute('data-theme') === 'dark') {
-            html.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            updateIcon(false);
-        } else {
-            html.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
+        [data-theme="dark"] .hero,
+        [data-theme="dark"] .content-section,
+        [data-theme="dark"] .section-image-container {
+            background-color: #1e1e1e !important;
+        }
+
+        [data-theme="dark"] header,
+        [data-theme="dark"] footer {
+            background-color: #0d0d1a !important;
+        }
+
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2 {
+            color: #ffffff !important;
+        }
+    </style>
+
+    <script>
+        function updateIcon(isDark) {
+            const btn = document.getElementById('themeToggleBtn');
+            if (isDark) {
+                btn.innerHTML = '🌙'; 
+            } else {
+                btn.innerHTML = '☀️'; 
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                updateIcon(false);
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcon(true);
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
             updateIcon(true);
+        } else {
+            updateIcon(false);
         }
-    }
+    </script>
 
-    // التحقق من الوضع المحفوظ عند فتح الموقع وتحديث الأيقونة فوراً
-    if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        updateIcon(true);
-    } else {
-        updateIcon(false);
-    }
-            </script>
-  <!-- شريط تقدم القراءة -->
-<div id="progress-bar" style="position: fixed; top: 0; left: 0; height: 4px; background: #00adb5; width: 0%; z-index: 9999; transition: width 0.1s ease;"></div>
+    <!-- شريط تقدم القراءة -->
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; height: 4px; background: #00adb5; width: 0%; z-index: 9999; transition: width 0.1s ease;"></div>
 
-<script>
-window.addEventListener('scroll', () => {
-    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById('progress-bar').style.width = scrolled + '%';
-});
-</script>
+    <script>
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
     
 </body>
 </html>
