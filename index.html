@@ -266,6 +266,86 @@
         document.getElementById('progress-bar').style.width = scrolled + '%';
     });
     </script>
+    <!-- زر تطاير الأكواد البرمجية التفاعلي -->
+<button id="codeSparksBtn" onclick="launchCodeSparks()" title="أكواد متطايرة" style="
+    position: fixed;
+    bottom: 95px;
+    left: 25px;
+    z-index: 9999;
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+">&#123;&#125;</button>
+
+<style>
+    #codeSparksBtn:hover {
+        transform: scale(1.15);
+        background-color: #007b82;
+    }
+    @keyframes codeFly {
+        0% {
+            transform: translateY(0) translateX(0) scale(0.5) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-180px) translateX(var(--random-x)) scale(1.2) rotate(var(--random-rotate));
+            opacity: 0;
+        }
+    }
+    .code-spark {
+        position: fixed;
+        bottom: 155px;
+        left: 45px;
+        z-index: 10000;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 16px;
+        color: #00adb5;
+        pointer-events: none;
+        animation: codeFly 1s ease-out forwards;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+</style>
+
+<script>
+    function launchCodeSparks() {
+        const codeSymbols = ['<div>', '</div>', 'CSS', 'JS', 'HTML', '{ }', '=>', 'console.log()', '</>', 'true', '404'];
+        
+        // عدد الرموز التي ستتطاير في الدفعة الواحدة
+        for (let i = 0; i < 12; i++) {
+            const spark = document.createElement('div');
+            spark.className = 'code-spark';
+            spark.innerText = codeSymbols[Math.floor(Math.random() * codeSymbols.length)];
+            
+            // تخصيص مسار عشوائي لكل رمز
+            const randomX = (Math.random() - 0.5) * 250 + 'px';
+            const randomRotate = (Math.random() - 0.5) * 60 + 'deg';
+            spark.style.setProperty('--random-x', randomX);
+            spark.style.setProperty('--random-rotate', randomRotate);
+            
+            // ألوان برمجية متنوعة ومتناسقة
+            const colors = ['#00adb5', '#ff5722', '#4caf50', '#ffeb3b', '#e91e63', '#9c27b0'];
+            spark.style.color = colors[Math.floor(Math.random() * colors.length)];
+            
+            document.body.appendChild(spark);
+            
+            // إزالة العنصر بعد انتهاء الحركة حفاظاً على أداء الصفحة
+            setTimeout(() => {
+                spark.remove();
+            }, 1000);
+        }
+    }
+</script>
     
 </body>
 </html>
