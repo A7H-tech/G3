@@ -53,7 +53,53 @@
         .content-section h2 { color: #1a1a2e; margin-bottom: 10px; border-bottom: 2px solid #00adb5; display: inline-block; padding-bottom: 5px; }
         footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; }
 
-        /* تنسيق الوضع الداكن لرابط المقالة داخل الـ style الرئيسية */
+        /* زر الوضع الداكن العائم */
+        .floating-theme-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 9999;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .floating-theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق الوضع الداكن */
+        [data-theme="dark"] body {
+            background-color: #121212 !important;
+            color: #f1f1f1 !important;
+        }
+
+        [data-theme="dark"] .hero,
+        [data-theme="dark"] .content-section,
+        [data-theme="dark"] .section-image-container {
+            background-color: #1e1e1e !important;
+        }
+
+        [data-theme="dark"] header,
+        [data-theme="dark"] footer {
+            background-color: #0d0d1a !important;
+        }
+
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2 {
+            color: #ffffff !important;
+        }
+
         [data-theme="dark"] .article-link {
             background-color: #2a2a2a !important;
             color: #ffffff !important;
@@ -152,5 +198,72 @@
                     background-color: #1877f2;
                     color: white;
                     padding: 12px 25px;
-                    border-radius: 
-                    
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 16px;
+                    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
+                    width: 220px;
+                    text-align: center;
+                ">
+                    🌐 فيسبوك
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة - فريق درويدات التقني</p>
+    </footer>
+
+    <!-- زر الوضع الداكن/الفاتح العائم -->
+    <button id="themeToggleBtn" class="floating-theme-btn" onclick="toggleTheme()" title="تبديل الوضع">
+        ☀️
+    </button>
+
+    <script>
+        function updateIcon(isDark) {
+            const btn = document.getElementById('themeToggleBtn');
+            if (isDark) {
+                btn.innerHTML = '🌙'; 
+            } else {
+                btn.innerHTML = '☀️'; 
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                updateIcon(false);
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcon(true);
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            updateIcon(true);
+        } else {
+            updateIcon(false);
+        }
+    </script>
+
+    <!-- شريط تقدم القراءة -->
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; height: 4px; background: #00adb5; width: 0%; z-index: 9999; transition: width 0.1s ease;"></div>
+
+    <script>
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
+    
+</body>
+</html>
