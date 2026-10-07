@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عنوان المقالة - فريق درويدات التقني</title>
+    <title>كيف تبدأ في تعلم تطوير الويب من الصفر؟ - فريق درويدات التقني</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,41 +22,102 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo { font-size: 20px; font-weight: bold; color: white; text-decoration: none; }
-        main { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h1 { color: #1a1a2e; border-bottom: 2px solid #00adb5; padding-bottom: 10px; }
+        .logo { font-size: 20px; font-weight: bold; }
         .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            background-color: #00adb5;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
             text-decoration: none;
+            background-color: #00adb5;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
+        .back-btn:hover { background-color: #007b82; }
+        main { max-width: 800px; margin: 30px auto; padding: 20px; }
+        .article-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 { color: #1a1a2e; font-size: 28px; border-bottom: 2px solid #00adb5; padding-bottom: 10px; margin-bottom: 20px; }
+        h3 { color: #00adb5; margin-top: 25px; }
+        p, li { font-size: 17px; color: #444; }
+        ul { padding-right: 20px; }
         footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+        /* دعم الوضع الداكن لصفحة المقال */
+        [data-theme="dark"] body {
+            background-color: #121212 !important;
+            color: #f1f1f1 !important;
+        }
+        [data-theme="dark"] .article-card {
+            background-color: #1e1e1e !important;
+        }
+        [data-theme="dark"] h1, [data-theme="dark"] h3, [data-theme="dark"] p, [data-theme="dark"] li {
+            color: #ffffff !important;
+        }
+        [data-theme="dark"] header, [data-theme="dark"] footer {
+            background-color: #0d0d1a !important;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">فريق درويدات التقني</a>
+        <div class="logo">فريق درويدات التقني</div>
+        <a href="index.html" class="back-btn">← العودة للرئيسية</a>
     </header>
 
     <main>
-        <h1>عنوان المقالة الأولى: كيف تبدأ في تعلم تطوير الويب؟</h1>
-        <p><strong>تاريخ النشر:</strong> 7 أكتوبر 2026</p>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-        
-        <p>هنا يمكنك كتابة محتوى المقال بكامل تفاصيله. عالم تطوير الويب واسع ويشمل تعلم لغات مثل HTML و CSS و JavaScript...</p>
-        <p>تعتبر هذه اللغات الأساس البناء لكل موقع إلكتروني ناجح، ومن خلال ممارستها بشكل مستمر يمكنك تطوير مهاراتك والوصول لمستوى احترافي.</p>
+        <article class="article-card">
+            <h1>كيف تبدأ في تعلم تطوير الويب من الصفر؟</h1>
+            <p>عالم تطوير الويب هو أحد أكثر المجالات مبيعاً وطلباً في سوق العمل التقني اليوم. إذا كنت مبتدئاً وتود الدخول إلى هذا العالم الواسع، فقد جمعنا لك في هذه المقالة أهم الخطوات والنصائح لتضع قدمك على الطريق الصحيح.</p>
 
-        <a href="index.html" class="back-btn">← العودة إلى الرئيسية</a>
+            <h3>1. ابدأ بالأساسيات (HTML و CSS)</h3>
+            <p>لا تقفز مباشرة إلى الإطارات المعقدة. يجب أن تفهم أولاً هيكل صفحات الويب باستخدام <strong>HTML</strong> وكيفية تنسيقها وتجميلها باستخدام <strong>CSS</strong>. هذه هي اللبنة الأساسية لأي مطور ويب ناجح.</p>
+
+            <h3>2. تعلم لغة JavaScript بعمق</h3>
+            <p>بعد إتقانك للأساسيات، تأتي الخطوة الأهم وهي جلب الحياة إلى موقعك. تتيح لك <strong>JavaScript</strong> صنع تفاعلات حية مع المستخدم، مثل الأزرار المتفاعلة، النوافذ المنبثقة، وتغيير محتوى الصفحة دون الحاجة لإعادة تحميلها.</p>
+
+            <h3>3. التطبيق العملي والمشاريع المصغرة</h3>
+            <p>المشاهدة وحدها لا تكفي لاكتساب مهارة البرمجة. قم بإنشاء مشاريع صغيرة بنفسك؛ مثل صفحة هبوط لشرح منتج، موقع شخصي بسيط (مثل موقعنا هذا)، أو آلة حاسبة تفاعلية. كل سطر برمجي تكتبه بنفسك يرفع من خبرتك.</p>
+
+            <h3>4. الاستفادة من منصات مثل GitHub</h3>
+            <p>اعتاد على رفع مشاريعك أولاً باول إلى منصة <strong>GitHub</strong>. هذا لا يحمي أكوادك من الضياع فحسب، بل يبني لك سيرة ذاتية رقمية (Portfolio) قوية تعرضها لاحقاً على الشركات والعملاء.</p>
+
+            <p style="margin-top: 30px; font-weight: bold; color: #00adb5;">نتمنى لك التوفيق في رحلتك البرمجية، ولا تتردد في التواصل معنا لأي استفسار إضافي عبر صفحة الرئيسية!</p>
+        </article>
     </main>
 
     <footer>
         <p>&copy; 2026 جميع الحقوق محفوظة - فريق درويدات التقني</p>
     </footer>
 
+    <!-- زر الوضع الداكن العائم لصفحة المقال -->
+    <button id="themeToggleBtn" style="position: fixed; bottom: 25px; left: 25px; z-index: 9999; background-color: #0088cc; color: white; border: none; border-radius: 50%; width: 55px; height: 55px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); display: flex; align-items: center; justify-content: center;" onclick="toggleTheme()">☀️</button>
+
+    <script>
+        function updateIcon(isDark) {
+            const btn = document.getElementById('themeToggleBtn');
+            btn.innerHTML = isDark ? '🌙' : '☀️';
+        }
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                updateIcon(false);
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcon(true);
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            updateIcon(true);
+        }
+    </script>
 </body>
 </html>
