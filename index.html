@@ -18,7 +18,34 @@
             padding: 0;
             line-height: 1.6;
             text-align: right;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        /* حاوية الرموز البرمجية الخلفية */
+        .code-bg-symbols {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .code-symbol {
+            position: absolute;
+            font-family: monospace;
+            font-weight: bold;
+            color: rgba(0, 173, 181, 0.08); /* لون باهت ومظلل */
+            user-select: none;
+        }
+
+        [data-theme="dark"] .code-symbol {
+            color: rgba(0, 173, 181, 0.12); /* لون باهت للوضع الداكن */
+        }
+
         header {
             background-color: #1a1a2e;
             color: white;
@@ -27,12 +54,14 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
         .logo { font-size: 20px; font-weight: bold; }
         nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
         nav ul li a { color: white; text-decoration: none; }
         nav ul li a:hover { color: #00adb5; }
-        main { max-width: 800px; margin: auto; padding: 20px; }
+        main { max-width: 800px; margin: auto; padding: 20px; position: relative; z-index: 1; }
         .hero { text-align: center; padding: 40px 20px; }
         .hero h1 { color: #1a1a2e; font-size: 32px; }
         .section-image-container { text-align: center; margin: 20px 0; }
@@ -51,7 +80,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .content-section h2 { color: #1a1a2e; margin-bottom: 10px; border-bottom: 2px solid #00adb5; display: inline-block; padding-bottom: 5px; }
-        footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+        footer { background-color: #1a1a2e; color: white; text-align: center; padding: 15px; margin-top: 40px; position: relative; z-index: 1; }
 
         /* زر الوضع الداكن العائم */
         .floating-theme-btn {
@@ -107,6 +136,23 @@
     </style>
 </head>
 <body>
+
+    <!-- خلفية الرموز البرمجية المتناثرة -->
+    <div class="code-bg-symbols">
+        <span class="code-symbol" style="top: 5%; left: 10%; font-size: 28px;">&lt;/&gt;</span>
+        <span class="code-symbol" style="top: 15%; left: 85%; font-size: 35px;">{ }</span>
+        <span class="code-symbol" style="top: 25%; left: 30%; font-size: 22px;">const</span>
+        <span class="code-symbol" style="top: 35%; left: 75%; font-size: 30px;">[ ]</span>
+        <span class="code-symbol" style="top: 45%; left: 15%; font-size: 24px;">// code</span>
+        <span class="code-symbol" style="top: 55%; left: 80%; font-size: 32px;">=&gt;</span>
+        <span class="code-symbol" style="top: 65%; left: 20%; font-size: 26px;">&lt;div&gt;</span>
+        <span class="code-symbol" style="top: 75%; left: 70%; font-size: 28px;">function</span>
+        <span class="code-symbol" style="top: 85%; left: 25%; font-size: 34px;">#include</span>
+        <span class="code-symbol" style="top: 92%; left: 85%; font-size: 25px;">return</span>
+        <span class="code-symbol" style="top: 10%; left: 50%; font-size: 20px;">;</span>
+        <span class="code-symbol" style="top: 40%; left: 50%; font-size: 32px;">&lt;html&gt;</span>
+        <span class="code-symbol" style="top: 70%; left: 50%; font-size: 24px;">let</span>
+    </div>
 
     <header>
         <div class="logo">فريق درويدات التقني</div>
