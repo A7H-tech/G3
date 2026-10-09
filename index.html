@@ -38,12 +38,12 @@
             position: absolute;
             font-family: monospace;
             font-weight: bold;
-            color: rgba(0, 173, 181, 0.08); /* لون باهت ومظلل */
+            color: rgba(0, 173, 181, 0.18); /* زيادة درجة الوضوح قليلاً في الوضع الفاتح */
             user-select: none;
         }
 
         [data-theme="dark"] .code-symbol {
-            color: rgba(0, 173, 181, 0.12); /* لون باهت للوضع الداكن */
+            color: rgba(0, 173, 181, 0.25); /* زيادة درجة الوضوح قليلاً في الوضع الداكن */
         }
 
         header {
@@ -137,21 +137,73 @@
 </head>
 <body>
 
-    <!-- خلفية الرموز البرمجية المتناثرة -->
+    <!-- خلفية الرموز البرمجية المكثفة والموزعة -->
     <div class="code-bg-symbols">
-        <span class="code-symbol" style="top: 5%; left: 10%; font-size: 28px;">&lt;/&gt;</span>
-        <span class="code-symbol" style="top: 15%; left: 85%; font-size: 35px;">{ }</span>
-        <span class="code-symbol" style="top: 25%; left: 30%; font-size: 22px;">const</span>
-        <span class="code-symbol" style="top: 35%; left: 75%; font-size: 30px;">[ ]</span>
-        <span class="code-symbol" style="top: 45%; left: 15%; font-size: 24px;">// code</span>
-        <span class="code-symbol" style="top: 55%; left: 80%; font-size: 32px;">=&gt;</span>
-        <span class="code-symbol" style="top: 65%; left: 20%; font-size: 26px;">&lt;div&gt;</span>
-        <span class="code-symbol" style="top: 75%; left: 70%; font-size: 28px;">function</span>
-        <span class="code-symbol" style="top: 85%; left: 25%; font-size: 34px;">#include</span>
-        <span class="code-symbol" style="top: 92%; left: 85%; font-size: 25px;">return</span>
-        <span class="code-symbol" style="top: 10%; left: 50%; font-size: 20px;">;</span>
-        <span class="code-symbol" style="top: 40%; left: 50%; font-size: 32px;">&lt;html&gt;</span>
-        <span class="code-symbol" style="top: 70%; left: 50%; font-size: 24px;">let</span>
+        <!-- الجانب الأيمن والأعلى -->
+        <span class="code-symbol" style="top: 3%; left: 5%; font-size: 26px;">&lt;/&gt;</span>
+        <span class="code-symbol" style="top: 8%; left: 15%; font-size: 20px;">{ }</span>
+        <span class="code-symbol" style="top: 2%; left: 25%; font-size: 32px;">const</span>
+        <span class="code-symbol" style="top: 12%; left: 35%; font-size: 24px;">[ ]</span>
+        <span class="code-symbol" style="top: 6%; left: 45%; font-size: 22px;">// dev</span>
+        <span class="code-symbol" style="top: 15%; left: 55%; font-size: 28px;">=&gt;</span>
+        <span class="code-symbol" style="top: 4%; left: 65%; font-size: 25px;">&lt;div&gt;</span>
+        <span class="code-symbol" style="top: 10%; left: 75%; font-size: 30px;">function</span>
+        <span class="code-symbol" style="top: 5%; left: 88%; font-size: 22px;">#include</span>
+        <span class="code-symbol" style="top: 14%; left: 95%; font-size: 27px;">return</span>
+
+        <!-- المنتصف العلوي -->
+        <span class="code-symbol" style="top: 22%; left: 8%; font-size: 28px;">let</span>
+        <span class="code-symbol" style="top: 28%; left: 18%; font-size: 22px;">;</span>
+        <span class="code-symbol" style="top: 20%; left: 30%; font-size: 34px;">&lt;html&gt;</span>
+        <span class="code-symbol" style="top: 26%; left: 42%; font-size: 26px;">var</span>
+        <span class="code-symbol" style="top: 23%; left: 52%; font-size: 30px;">async</span>
+        <span class="code-symbol" style="top: 27%; left: 62%; font-size: 24px;">await</span>
+        <span class="code-symbol" style="top: 21%; left: 72%; font-size: 26px;">&lt;body&gt;</span>
+        <span class="code-symbol" style="top: 25%; left: 82%; font-size: 29px;">import</span>
+        <span class="code-symbol" style="top: 29%; left: 92%; font-size: 23px;">export</span>
+
+        <!-- الوسط -->
+        <span class="code-symbol" style="top: 38%; left: 4%; font-size: 30px;">0101</span>
+        <span class="code-symbol" style="top: 45%; left: 14%; font-size: 25px;">&lt;p&gt;</span>
+        <span class="code-symbol" style="top: 40%; left: 24%; font-size: 28px;">class</span>
+        <span class="code-symbol" style="top: 47%; left: 36%; font-size: 22px;">===</span>
+        <span class="code-symbol" style="top: 42%; left: 48%; font-size: 32px;">true</span>
+        <span class="code-symbol" style="top: 48%; left: 60%; font-size: 26px;">false</span>
+        <span class="code-symbol" style="top: 41%; left: 70%; font-size: 24px;">null</span>
+        <span class="code-symbol" style="top: 46%; left: 80%; font-size: 28px;">&lt;/script&gt;</span>
+        <span class="code-symbol" style="top: 43%; left: 92%; font-size: 25px;">&lt;head&gt;</span>
+
+        <!-- النصف السفلي -->
+        <span class="code-symbol" style="top: 58%; left: 8%; font-size: 24px;">while</span>
+        <span class="code-symbol" style="top: 64%; left: 18%; font-size: 30px;">for</span>
+        <span class="code-symbol" style="top: 57%; left: 28%; font-size: 26px;">if</span>
+        <span class="code-symbol" style="top: 62%; left: 40%; font-size: 28px;">else</span>
+        <span class="code-symbol" style="top: 59%; left: 52%; font-size: 23px;">switch</span>
+        <span class="code-symbol" style="top: 65%; left: 64%; font-size: 29px;">case</span>
+        <span class="code-symbol" style="top: 58%; left: 75%; font-size: 25px;">break</span>
+        <span class="code-symbol" style="top: 63%; left: 86%; font-size: 31px;">try</span>
+        <span class="code-symbol" style="top: 60%; left: 95%; font-size: 22px;">catch</span>
+
+        <!-- أسفل الصفحة -->
+        <span class="code-symbol" style="top: 74%; left: 5%; font-size: 27px;">document</span>
+        <span class="code-symbol" style="top: 80%; left: 15%; font-size: 23px;">window</span>
+        <span class="code-symbol" style="top: 76%; left: 25%; font-size: 30px;">console.log</span>
+        <span class="code-symbol" style="top: 82%; left: 35%; font-size: 25px;">addEventListener</span>
+        <span class="code-symbol" style="top: 75%; left: 48%; font-size: 28px;">&lt;style&gt;</span>
+        <span class="code-symbol" style="top: 83%; left: 58%; font-size: 22px;">margin</span>
+        <span class="code-symbol" style="top: 78%; left: 68%; font-size: 26px;">padding</span>
+        <span class="code-symbol" style="top: 84%; left: 78%; font-size: 32px;">display</span>
+        <span class="code-symbol" style="top: 77%; left: 90%; font-size: 24px;">flex</span>
+
+        <!-- النهاية والقاع -->
+        <span class="code-symbol" style="top: 91%; left: 10%; font-size: 29px;"># G3</span>
+        <span class="code-symbol" style="top: 95%; left: 22%; font-size: 21px;">CSS3</span>
+        <span class="code-symbol" style="top: 90%; left: 35%; font-size: 33px;">HTML5</span>
+        <span class="code-symbol" style="top: 96%; left: 45%; font-size: 25px;">JS</span>
+        <span class="code-symbol" style="top: 92%; left: 58%; font-size: 28px;">Git</span>
+        <span class="code-symbol" style="top: 97%; left: 70%; font-size: 24px;">GitHub</span>
+        <span class="code-symbol" style="top: 91%; left: 82%; font-size: 27px;">&lt;/html&gt;</span>
+        <span class="code-symbol" style="top: 95%; left: 93%; font-size: 30px;">{ }</span>
     </div>
 
     <header>
